@@ -1,3 +1,360 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
 
 
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+    margin: 0;
+    padding: 0;
+    /* border: 0px solid lightblue; */
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,ul {
+    list-style: none;
+}
+
+blockquote,q {
+    quotes: none;
+}
+
+blockquote:before,blockquote:after,q:before,q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* Set every element's box-sizing to border-box */
+
+* {
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1,h2,h3,h4,h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+
+/****************WORK HERE********************/
+
+.container {
+    width: 880px;
+    /* TB LR */
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+
+/* header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+
+header nav {
+    width: 691px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a {
+    font-size: 14px;
+    color: gray;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+header nav a:first-child {
+    margin-left: 0;
+}
+
+header nav a:last-child {
+    margin-right: 75px;
+}
+
+.cta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+
+.cta-text {
+    font-size: 77px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-grow: 2;
+}
+
+.cta-text-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta .cta-text button {
+    background: white;
+    padding: 8px 44px;
+    font-size: 17px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.cta .cta-text button:hover {
+    background: black;
+    color: white;
+}
+
+.main-content {
+    border-top: 1px solid black;
+    margin-top: 76px;
+    padding-top: 39px;
+}
+
+.main-content .top-content {
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.main-content .top-content .text-content {
+    display: flex;
+    flex-direction: column;
+    margin-right: 34px;
+}
+
+.main-content .top-content .text-content:last-child {
+    margin-right: 0;
+}
+
+.main-content .middle-img {
+    margin-top: 45px;
+}
+
+.main-content .bottom-content {
+    margin-top: 37px;
+    padding: 0 10px;
+    display: flex;
+}
+
+.main-content .bottom-content .text-content {
+    width: 275px;
+    display: flex;
+    margin-right: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content .bottom-content .text-content:last-child {
+    margin-right: 0;
+}
+
+.contact {
+    margin-top: 57px;
+    border-top: 1px solid black;
+    padding: 39px 10px 0;
+}
+
+.contact p {
+    margin: 20px 0;
+}
+
+footer {
+    margin: 32px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 800px) {
+    
+    .container{
+        padding: 0 3%;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        margin-top: 35px;
+        align-items: center;
+    }
+
+    header nav a:first-child {
+        margin-left: 0;
+    }
+    
+    header nav a:last-child {
+        margin-right: 0px;
+    }
+
+    header .logo{
+        max-width: 25%;
+        margin-bottom: 35px;
+    }
+
+    .cta-img{
+        display: none;
+    }
+
+    .middle-img{
+        max-width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    body {
+      /* background-color: lightcyan; */
+    }
+
+    .container{
+        padding: 0
+    }
+
+    header nav a, p{
+        font-size: 30px;
+    }
+
+    h3, h4, h5{
+        font-size: 35px;
+    }
+
+    header {
+        /* border: 1px solid black; */
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        margin-top: 35px;
+        align-items: center;
+    }
+
+    header nav{
+        /* border: 1px solid blue; */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-bottom: 5%;
+        
+    }
+
+    header div{
+        border-top: 1px solid black;
+        padding: 3.5%;
+        width: 100%;        
+        text-align: center;
+    }
+
+    header nav div:last-child{
+        border-bottom: 1px solid black;
+    }
+
+    header nav a{
+       
+        /* margin-bottom: 2%; */
+        border-width: 100%;
+    }
+
+    header nav a:first-child {
+        margin-left: 0;
+    }
+    
+    header nav a:last-child {
+        margin-right: 0px;
+    }
+
+    .cta, .main-content, .contact{
+        /* border: 1px solid blue; */
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    header .logo{
+        width: 50vh;
+        margin-bottom: 35px;
+    }
+
+    .cta{
+        /* border-bottom: 1px solid black; */
+        
+    }
+
+    .cta-img{
+        display: none;
+    }
+
+    .top-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .text-content{
+        padding-bottom: 5%;
+    }
+
+    .middle-img{
+        max-width: 100%;
+    }
+
+    .top-content{
+        /* border: 1px solid red; */
+    }
+
+    .main-content .bottom-content{
+        /* border: 1px solid blue; */
+        padding: 0 0;
+        flex-direction: column; 
+    }
+
+
+    .main-content .bottom-content .text-content{
+        /* border: 1px solid blue; */
+        width: 100%;
+    }
+
+    .contact {
+        /* margin-top: 57px; */
+        border-top: 1px solid black;
+        padding: 0;
+        padding-top: 5%;
+    }
+  }
+  

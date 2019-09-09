@@ -191,9 +191,14 @@ footer {
     font-size: 14px;
 }
 
-@media screen and (max-width: 800px) {
-    
-    .container{
+@media screen and (max-width: 800px) { 
+
+    .container {
+        width: 100%;
+        /* TB LR */
+        display: flex;
+        flex-direction: column;
+        margin: auto;
         padding: 0 3%;
     }
 
@@ -203,6 +208,10 @@ footer {
         justify-content: space-between;
         margin-top: 35px;
         align-items: center;
+    }
+
+    header nav{
+        width: 100%;
     }
 
     header nav a:first-child {
@@ -218,33 +227,37 @@ footer {
         margin-bottom: 35px;
     }
 
-
-
     .services-header-img{
+        max-width: 100%;
+    }
+
+    .bottom-content div{
+        width: 50%;
+    }
+
+    .bottom-content div:first-child{
+        margin-right:2%;
+    }
+
+    .services-info-img{
         max-width: 100%;
     }
   }
 
+
+  
+  /***************500 PX**************/
+
   @media screen and (max-width: 500px) {
-    body {
-      /* background-color: lightcyan; */
+    
+    .container {
+        width: 100%;        
+        padding: 0;
+        display: flex;
+        flex-direction: column;
     }
-
-    .container{
-        padding: 0
-    }
-
-    header nav a, p, ul, li{
-        font-size: 30px;
-    }
-
-    h3, h4, h5{
-        font-size: 35px;
-    }
-
     
     header {
-        /* border: 1px solid black; */
         display: flex;
         flex-direction: column-reverse;
         justify-content: space-evenly;
@@ -253,13 +266,11 @@ footer {
     }
 
     header nav{
-        /* border: 1px solid blue; */
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        padding-bottom: 5%;
-        
+        padding-bottom: 5%;        
     }
 
     header div{
@@ -274,8 +285,6 @@ footer {
     }
 
     header nav a{
-       
-        /* margin-bottom: 2%; */
         border-width: 100%;
     }
 
@@ -294,7 +303,7 @@ footer {
     }
 
     header .logo{
-        width: 50vh;
+        width:35vh;
         margin-bottom: 35px;
     }
 
@@ -304,6 +313,10 @@ footer {
 
     .cta-img{
         display: none;
+    }
+
+    .cta{
+        max-width: 100%;
     }
 
     .top-content{
@@ -316,9 +329,6 @@ footer {
         padding-bottom: 5%;
     }
 
-    .middle-img{
-        max-width: 100%;
-    }
 
     .main-content{
         display: flex;
@@ -329,9 +339,6 @@ footer {
         width: 100%;
     }
 
-    .main-content button{
-        font-size: 30px;
-    }
 
     .main-content .bottom-content{
         /* border: 1px solid blue; */
@@ -345,10 +352,14 @@ footer {
         width: 100%;
     }
 
+    .bottom-content .text-content{
+        width: 100%;
+    }
 
-    .bottom-content img{
+    .bottom-content .services-img-div{
         display: none;
     }
+
 
     .contact {
         /* margin-top: 57px; */

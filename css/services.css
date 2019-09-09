@@ -1,6 +1,7 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
-
-
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
     margin: 0;
@@ -19,18 +20,25 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 }
 
 body {
-    line-height: 1;
+    line-height: 1.5;
 }
 
-ol,ul {
-    list-style: none;
+ol,
+ul {
+    list-style: disc;
+    list-style-position: inside;
+    line-height: 2;
 }
 
-blockquote,q {
+blockquote,
+q {
     quotes: none;
 }
 
-blockquote:before,blockquote:after,q:before,q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
     content: '';
     content: none;
 }
@@ -45,29 +53,43 @@ table {
 
 * {
     box-sizing: border-box;
+    /* border: 1px solid blue !important; */
 }
 
-html,body {
+html,
+body {
     height: 100%;
     font-family: 'Titillium Web', sans-serif;
 }
 
-h1,h2,h3,h4,h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-family: 'Bangers', cursive;
     letter-spacing: 1px;
     margin-bottom: 15px;
 }
 
+h2{
+    font-size: 25px;
+}
+
 
 /****************WORK HERE********************/
 
-.container {
+
+.container{
     width: 880px;
-    /* TB LR */
     display: flex;
     flex-direction: column;
     margin: auto;
 }
+
+
+
+
 
 
 /* header */
@@ -83,6 +105,7 @@ header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* margin-top: 35px; */
 }
 
 header nav a {
@@ -103,98 +126,63 @@ header nav a:last-child {
     margin-right: 75px;
 }
 
-.cta {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 35px;
-}
+/* main content */
 
-.cta-text {
-    font-size: 77px;
-    text-align: center;
+.top-content {
+    padding-top: 25px;
+    padding-bottom: 25px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    flex-grow: 2;
-}
-
-.cta-text-content {
-    display: flex;
-    align-items: center;
     justify-content: center;
-}
-
-.cta-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.cta .cta-text button {
-    background: white;
-    padding: 8px 44px;
-    font-size: 17px;
-    border: 1px solid black;
-    cursor: pointer;
-}
-
-.cta .cta-text button:hover {
-    background: black;
-    color: white;
 }
 
 .main-content {
     border-top: 1px solid black;
-    margin-top: 76px;
-    padding-top: 39px;
-}
-
-.main-content .top-content {
+    margin-top: 25px;
+    padding: 25px 0px;
     display: flex;
-    justify-content: center;
-    padding: 0 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.main-content .top-content .text-content {
-    display: flex;
-    flex-direction: column;
-    margin-right: 34px;
-}
-
-.main-content .top-content .text-content:last-child {
-    margin-right: 0;
-}
-
-.main-content .middle-img {
-    margin-top: 45px;
-}
-
-.main-content .bottom-content {
-    margin-top: 37px;
-    padding: 0 10px;
-    display: flex;
-}
-
-.main-content .bottom-content .text-content {
-    width: 275px;
-    display: flex;
-    margin-right: 12px;
+.main-content div{
+    border: 1px solid black; 
+    width: 47%;  
+    margin-top: 35px;
+    padding: 20px 20px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-.main-content .bottom-content .text-content:last-child {
-    margin-right: 0;
+.main-content button {
+    background: white;
+    /* vertical-align: top; */
+    /* margin-top: 6px; */
+    padding: 8px 44px;
+    font-size: 12px;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 4px;
 }
 
-.contact {
-    margin-top: 57px;
+.bottom-content {
     border-top: 1px solid black;
-    padding: 39px 10px 0;
+    margin-top: 25px;
+    padding: 50px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;    
+}
+                                     
+.bottom-content .text-content{
+    display: flex;
+    flex-direction: column;
 }
 
-.contact p {
-    margin: 20px 0;
+.banner .services-header-img {
+    margin-top: 25px;
 }
 
 footer {
@@ -230,11 +218,9 @@ footer {
         margin-bottom: 35px;
     }
 
-    .cta-img{
-        display: none;
-    }
 
-    .middle-img{
+
+    .services-header-img{
         max-width: 100%;
     }
   }
@@ -248,7 +234,7 @@ footer {
         padding: 0
     }
 
-    header nav a, p{
+    header nav a, p, ul, li{
         font-size: 30px;
     }
 
@@ -256,6 +242,7 @@ footer {
         font-size: 35px;
     }
 
+    
     header {
         /* border: 1px solid black; */
         display: flex;
@@ -300,7 +287,7 @@ footer {
         margin-right: 0px;
     }
 
-    .cta, .main-content, .contact{
+    .top-content, .main-content, .bottom-content, footer{
         /* border: 1px solid blue; */
         margin-left: 5%;
         margin-right: 5%;
@@ -311,9 +298,8 @@ footer {
         margin-bottom: 35px;
     }
 
-    .cta{
-        /* border-bottom: 1px solid black; */
-        
+    .banner{
+        display: none;
     }
 
     .cta-img{
@@ -334,8 +320,17 @@ footer {
         max-width: 100%;
     }
 
-    .top-content{
-        /* border: 1px solid red; */
+    .main-content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-content div{
+        width: 100%;
+    }
+
+    .main-content button{
+        font-size: 30px;
     }
 
     .main-content .bottom-content{
@@ -350,6 +345,11 @@ footer {
         width: 100%;
     }
 
+
+    .bottom-content img{
+        display: none;
+    }
+
     .contact {
         /* margin-top: 57px; */
         border-top: 1px solid black;
@@ -357,4 +357,3 @@ footer {
         padding-top: 5%;
     }
   }
-  
